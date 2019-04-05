@@ -1,0 +1,114 @@
+body{
+    margin:0;
+    padding:0;
+    line-height:1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
+
+}
+header{
+    background-color:rgb(140,170,190);
+    border-bottom:red 3px solid;
+}
+header .headercontainer{
+    width: 80%;
+    margin:auto;
+    text-align:center;
+    padding-bottom:5px;
+}
+h1{
+    padding:0;
+    font-size:3.5em;
+    margin-bottom:20px;
+    margin-top:0;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 3px 3px 3px black;
+}
+h2{
+    padding:0;
+    font-size:2.3em;
+    margin-bottom:20px;
+    margin-top:0;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 2px 2px 2px black;
+}
+h3{
+    margin:0;
+}
+
+#bio img{
+    float:left;
+    border-radius:3px;
+    margin-right:20px;
+    max-width: 100%;
+    width:auto;
+}
+#indextext{
+    text-align:center;
+    overflow:hidden;
+    background-color:rgb(140,170,190);
+    border-radius:3px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 2px 2px 2px black;
+    margin:0;
+    padding:5px;
+    font-size:1.4em;
+}
+@media screen and (max-width: 900px){
+    h1{
+        font-size: 2.8em;
+    }
+    h2{
+        font-size: 1.6em;
+    }
+}
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 1.6em;
+    }
+    h2{
+        font-size: 1.2em;
+    }
+    #indextext{
+        font-size: 1.1em;
+    }
+}
+#bio{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+#index{
+    width:80%;
+    margin:auto;
+    border-top:red 2px solid;
+}
+
+#index ul{
+    list-style-type:upper-roman;
+}
+#index ul li{
+    margin:10px;
+}
+#firstline::first-letter{
+    font-size:300%;
+    font-family:"old english text mt";
+    color:rgb(8, 71, 107);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white,3px 3px 4px #000000;  
+}
+section #dontindent{
+    text-indent:0;
+}
+footer{
+    width:100%;
+    background-color:rgb(140,170,185);
+    text-align:center;
+    margin:0;
+    padding:0;
+    border-top:red 2px solid;
+    border-bottom:red 2px solid;
+}
+footer h3{
+    margin:0;
+    padding:5px;
+    font-size:1.3em;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white
+}

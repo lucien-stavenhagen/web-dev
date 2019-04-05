@@ -1,0 +1,63 @@
+:root{
+    --my-grad:inherit;
+    --my-border:1px black solid;
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: Arial;
+    line-height: 1.3em;
+    background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
+}
+header{
+    text-align: center;
+    margin:0;
+    padding:10px;
+    background-color:rgb(140,170,190);
+}
+header p, h2{
+    margin:0;
+    padding:4px;
+}
+section{
+    width:80%;
+    margin:auto;
+    padding-top:5px;
+}
+.splitup{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap:2px;
+    padding:2px;
+    border:var(--my-border);
+}
+.maincourse{
+    display: grid;
+    grid-gap:1px;
+    overflow:auto;
+    grid-template-columns: auto auto;
+}
+
+.mcitems, .dupetitle{
+    border:var(--my-border);
+    background-color:var(--my-grad);
+}
+.span2, .apology{
+    grid-column-start:1;
+    grid-column-end: 3;
+    text-align:center;
+    border:var(--my-border);
+    background-color:var(--my-grad);
+}
+
+@media screen and (max-width: 600px){
+    .splitup{
+        grid-template-columns: auto;
+    }
+    .span2{
+        grid-column: 1/2;
+    }
+    .dupetitle{
+        display: none;
+    }
+}

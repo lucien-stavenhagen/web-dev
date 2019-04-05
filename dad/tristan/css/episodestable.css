@@ -1,0 +1,50 @@
+body{
+    padding:0;
+    margin:0;
+    font-family: Arial;
+    line-height: 1.3em;
+    background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
+}
+header{
+    text-align: center;
+    margin:0;
+    padding:10px;
+    background-color:rgb(140,170,190);
+}
+header p, h2{
+    margin:0;
+    padding:4px;
+}
+section{
+    width:80%;
+    margin:auto;
+    padding-top:5px;
+}
+#prologue{
+    width:40%;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    border-style: double;
+    border-width:3px;
+    border-color: rgb(43, 83, 110);
+}
+#prologue p{
+    margin:0;
+    padding:3px;
+}
+#maincourse table{
+/*    border-collapse: collapse;*/
+    width:100%;
+}
+#maincourse table, th, td{
+    border-style: double;
+    border-width:1px;
+    border-color: rgb(43, 83, 110);
+}
+#maincourse th,td{
+    padding:3px;
+}
+#maincourse td a:hover{
+    color:black;
+}

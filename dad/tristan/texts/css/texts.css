@@ -1,0 +1,37 @@
+body{
+    padding:0;
+    margin:0;
+    font-family: Arial;
+    line-height: 1.3em;
+    background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
+}
+section{
+    width:80%;
+    margin:auto;
+    overflow:auto;
+}
+header{
+    text-align:center;
+}
+header img{
+    box-shadow:8px 8px 5px grey;
+}
+hr{
+    width:35%;
+    margin-left:0;
+}
+pre{
+    font-size:1.3em;
+}
+nav{
+    width:80%;
+    margin: auto;
+}
+nav li{
+    list-style-type: none;
+    display:inline-block;
+}
+nav li a{
+    margin-right:50px;
+    font-size:1.3em;
+}

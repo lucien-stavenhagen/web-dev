@@ -1,0 +1,27 @@
+body{
+    padding:0;
+    margin:0;
+    font-family: Arial;
+    line-height: 1.3em;
+    background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
+}
+article{
+    width:80%;
+    margin:auto;
+}
+article header{
+    text-align:center;
+}
+article hr{
+    width:30%;
+    margin-left:0;
+}
+#gotefrit{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+img{
+    max-width:100%;
+    width:auto;
+}

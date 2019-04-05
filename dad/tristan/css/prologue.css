@@ -1,0 +1,44 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial;
+    line-height: 1.3em;
+    background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
+}
+header{
+    text-align:center;
+}
+section{
+    width:80%;
+    overflow:auto;
+    margin:auto;
+}
+#firstline::first-letter{
+    font-size:200%;
+    font-family:"old english text mt";
+    color:rgb(8, 71, 107);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white,3px 3px 4px #000000;  
+}
+pre{
+    font-size:1.2em;
+}
+
+nav{
+    width:80%;
+    margin: auto;
+    overflow:hidden;
+    padding-bottom:30px;
+}
+nav ul{
+    margin:0;
+    padding:0;
+}
+nav li{
+    list-style-type: none;
+    display:inline-block;
+}
+nav li a{
+    margin-right:50px;
+    font-size:1.3em;
+    padding:0;
+}
