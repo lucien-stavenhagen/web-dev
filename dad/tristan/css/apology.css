@@ -32,15 +32,19 @@ article img{
 }
 .twocols{
     width:90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: auto;
     overflow: auto;
     font-size:1.2em;
 }
 .twocols .leftcol{
     overflow: auto;
-    float: left;
+    margin:5px;
 }
 .twocols .rightcol{
     overflow: auto;
-    float: right;
+    margin: 5px;
 }
