@@ -34,8 +34,8 @@ section{
 .maincourse{
     display: grid;
     grid-gap:1px;
-    overflow:auto;
-    grid-template-columns: auto auto;
+    overflow:hidden;
+    grid-template-columns: minmax(120px, 1fr) minmax(60px,1fr);
 }
 
 .mcitems, .dupetitle{
