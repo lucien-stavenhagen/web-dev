@@ -1,0 +1,44 @@
+:root{
+    --my-dark:rgb(20, 75, 92);
+}
+body{
+    padding:0;
+    margin:0;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to right, rgb(142, 222, 247), rgb(199, 235, 255));
+}
+header{
+    text-align: center;
+    background-color:var(--my-dark);
+    border-bottom:1px red solid;
+}
+header h2{
+    margin:0;
+    padding:20px;
+    color:white;
+}
+section{
+    width: 80%;
+    margin: auto;
+}
+footer{
+    background-color:var(--my-dark);
+    border-top:1px red solid;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+footer h2{
+    margin: 0;
+}
+footer a{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+    color:#cccccc;
+}
