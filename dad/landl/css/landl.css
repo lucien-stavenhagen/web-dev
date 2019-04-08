@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    line-height:1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
+}
+header{
+    text-align: center;
+    background-color:rgb(140,170,190);
+    border-bottom:red 1px solid;
+}
+h1, h2{
+    margin: 0;
+    padding: 0;
+}
+.starthere{
+    width:100%;
+    margin: auto;
+    padding:10px;
+    text-align: center;
+    background-color:rgb(7, 55, 75);
+    border-bottom:red 1px solid;
+}
+.starthere a{
+    font-size: 1.3em;
+    text-decoration: none;
+    color:white;
+}
+.starthere a:hover{
+    color:#cccccc;
+    text-decoration: underline;
+}
+
+/*template css for images on left*/
+
+.imggrid{
+    width:80%;
+    overflow: hidden;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+/*    align-items: center;*/
+    border: 1px black solid;
+    padding-bottom:10px;
+}
+.imggrid .imglcont, .imggrid .imgrcont{
+    overflow: hidden;
+    border:1px black solid;
+}
+.imggrid img{
+    max-width:100%;
+    width: auto;
+    border-radius: 5px;
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 4px 4px 4px grey;
+}
+.imggrid .lcomment, .imggrid .rcomment{
+    border: 1px black solid;
+    margin: 20px;
+}
+.imggrid .lcomment h3, .imggrid .rcomment h3{
+    text-align: center;
+    text-decoration: none;
+}
+/* 
+switch positions of image and comment columns
+but with the same markup positions
+*/
+.imggrid .rcomment{
+    grid-area:1/1/1/2;
+}
+.imggrid .rcont{
+    grid-area:1/2/1/3;
+}
+@media screen and (max-width: 700px){
+    .imggrid{
+        grid-template-columns: 1fr;
+    }
+    /* 
+    invert position of comment and 
+    image so image is above comment
+    */
+    .imggrid .rcomment{
+        grid-area: 2/1/2/2;
+    }
+    .imggrid .rcont{
+        grid-area: 1/1/2/1;
+    }
+}
