@@ -65,6 +65,8 @@ header h2{
 }
 .imggrid .imglcont, .imggrid .imgrcont{
     overflow: hidden;
+    padding-bottom: 6px;
+    padding-right: 6px;
 }
 .imggrid img{
     max-width:100%;
