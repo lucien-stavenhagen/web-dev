@@ -13,7 +13,7 @@ section{
     overflow:auto;
     margin:auto;
 }
-#firstline::first-letter{
+.firstline::first-letter{
     font-size:200%;
     font-family:"old english text mt";
     color:rgb(8, 71, 107);
