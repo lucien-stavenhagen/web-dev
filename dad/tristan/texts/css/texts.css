@@ -10,6 +10,22 @@ section{
     margin:auto;
     overflow:auto;
 }
+section .reviews{
+    float: right;
+    max-width:100%;
+    width: auto;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    box-shadow:4px 4px 3px grey;
+}
+section .reviewreinmar, section .reviewwalther{
+    max-width: 230px;
+    float: right;
+    width: auto;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    box-shadow: 4px 4px 3px grey;
+}
 header{
     text-align:center;
 }
@@ -48,4 +64,15 @@ the "birth" episode
     padding:0 5px;
     margin:0;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white,3px 3px 4px #000000;  
+}
+@media screen and (max-width: 950px){
+    section .reviews{
+        float: none;
+        display: block;
+    }
+    section .reviewreinmar, section .reviewwalther{
+        float: none;
+        display: block;
+        max-width:100%;
+    }
 }
