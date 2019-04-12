@@ -25,6 +25,11 @@ header h1{
     font-size:4.8em;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, 4px 4px 4px #000000;
 }
+header .home{
+    margin: 0;
+    padding: 2px;
+    font-family: "Times New Roman";
+}
 #precis{
     background-image:linear-gradient(to right,rgb(133, 170, 172),rgb(232, 240, 241));
     width:100%;
