@@ -1,0 +1,64 @@
+:root{
+--my-dark: rgb(94, 53, 26);
+}
+
+body{
+padding: 0;
+margin: 0;
+line-height: 1.2em;
+font-family:"Times New Roman", Times, serif;
+background-color: rgb(149, 219, 252);
+}
+header{
+    background-color:var(--my-dark);
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    border-bottom:2px black solid;
+}
+header h2{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.commentsect{
+    width: 80%;
+    margin: auto;
+}
+.commentsect hr{
+    width:30%;
+    margin-left:0;
+}
+.commentsect figure{
+    width:90%;
+    margin: auto;
+    overflow: hidden;
+    background-color:rgb(255, 234, 227);
+    border: 1px black solid;
+    padding: 5px;
+}
+.commentsect figure img{
+    max-width: 70%;
+    width:auto;
+    float: left;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    box-shadow: 4px 4px 4px grey;
+}
+footer{
+    background-color: var(--my-dark);
+    text-align: center;
+    padding: 10px;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+footer a:hover{
+    color: #cccccc;
+    text-decoration: underline;
+}
