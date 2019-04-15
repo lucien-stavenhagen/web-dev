@@ -42,16 +42,27 @@ pre{
     font-size:1.3em;
 }
 nav{
-    width:80%;
+    width:100%;
     margin: auto;
+    text-align: center;
+    background-color: rgb(8, 71, 107);
+    border-top:1px red solid;
+    overflow: hidden;
 }
 nav li{
     list-style-type: none;
     display:inline-block;
+    padding:5px;
 }
 nav li a{
     margin-right:50px;
     font-size:1.3em;
+    color: white;
+    text-decoration: none;
+}
+nav li a:hover{
+    color:#cccccc;
+    text-decoration: underline;
 }
 /* stylize first letter in
 the "birth" episode
