@@ -38,8 +38,9 @@ h3{
     float:left;
     border-radius:3px;
     margin-right:20px;
-    max-width: 100%;
+    max-width: 97%;
     width:auto;
+    box-shadow: 4px 4px 4px grey;
 }
 #indextext{
     text-align:center;
