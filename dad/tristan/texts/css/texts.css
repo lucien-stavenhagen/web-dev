@@ -12,7 +12,7 @@ section{
 }
 section .reviews, section .morolt, section .voyage, section .imposture, section .poison, section .gandin, section .melot{
     float: right;
-    max-width:100%;
+    max-width:97%;
     width: auto;
     margin-bottom: 6px;
     margin-right: 6px;
@@ -30,7 +30,7 @@ header{
     text-align:center;
 }
 header img{
-    max-width:100%;
+    max-width:96%;
     width:auto;
     box-shadow:8px 8px 5px grey;
 }
@@ -84,6 +84,6 @@ the "birth" episode
     section .reviewreinmar, section .reviewwalther{
         float: none;
         display: block;
-        max-width:100%;
+        max-width:97%;
     }
 }
