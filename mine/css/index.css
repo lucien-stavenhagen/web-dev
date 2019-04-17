@@ -1,0 +1,52 @@
+body{
+padding:0;
+margin:0;
+line-height: 1.8em;
+font-family:"Times New Roman", Times, fantasy, serif;
+}
+
+header{
+    background-color:rgb(18, 62, 73);
+    text-align: center;
+    margin:0;
+    padding: 20px;
+}
+header h1, h3{
+    margin:0;
+    padding: 0;
+    color: white;
+}
+
+nav{
+    background-color:rgb(7, 26, 31);
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    width:80%;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li:hover{
+    background-color: rgb(105, 25, 25);
+}
+footer{
+    background-color:rgb(48, 16, 8);
+    text-align: center;
+}
+footer p{
+    color: white;
+    margin: 0;
+    padding: 8px;
+}
