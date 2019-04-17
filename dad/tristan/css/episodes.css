@@ -33,7 +33,7 @@ section{
 }
 .maincourse{
     display: grid;
-    grid-gap:1px;
+    grid-gap:2px;
     overflow:hidden;
     grid-template-columns: minmax(120px, 1fr) minmax(60px,1fr);
 }
@@ -41,6 +41,7 @@ section{
 .mcitems, .dupetitle{
     border:var(--my-border);
     background-color:var(--my-grad);
+    padding: 2px;
 }
 .span2, .apology{
     grid-column-start:1;
@@ -48,6 +49,14 @@ section{
     text-align:center;
     border:var(--my-border);
     background-color:var(--my-grad);
+    padding: 2px;
+}
+.mcitems a, .span2 a, .apology a{
+    text-decoration: none;
+}
+.mcitems a:hover, .span2 a:hover, .apology a:hover{
+    text-decoration: underline;
+    color: black;
 }
 
 @media screen and (max-width: 600px){
