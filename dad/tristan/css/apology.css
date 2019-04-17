@@ -12,8 +12,16 @@ article{
     width:80%;
     margin:auto;
 }
-article header{
+header{
     text-align:center;
+    margin:0;
+    padding: 15px;
+    background-color: rgb(63, 12, 12);
+}
+header h2{
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 article hr{
     width:30%;
@@ -49,4 +57,30 @@ article img{
 .twocols .rightcol{
     overflow: auto;
     margin: 5px;
+}
+footer{
+    background-color: rgb(63, 12, 12);
+    text-align: center;
+}
+footer ul{
+    width: 100%;
+    list-style-type: none;
+    color: white;
+}
+footer ul #emailme{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+footer ul li{
+    display: inline-block;
+    padding: 10px;
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+    color:#cccccc;
 }
