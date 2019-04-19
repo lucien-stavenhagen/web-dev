@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1.3;
+    background-color: #cccccc;
+}
+header{
+    overflow: hidden;
+    padding: 15px;
+    background-color: rgb(16, 66, 70);
+    border-bottom: red 1px solid;
+}
+.headerleft{
+    float: left;
+}
+.headerleft h1, h3{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.menubar{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.menubar nav{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+.menubar nav > div{
+    display: inline-block; 
+    margin: 0;
+    padding: 10px;
+}
+.menubar nav a{
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+.menubar nav >div:hover{
+    background-color: rgb(45, 67, 189);
+}
+/* center section */
+.middle{
+    overflow: hidden;
+}
+.leftcontent{
+    width:65%;
+    overflow: hidden;
+    float: left;
+    padding: 5px;
+}
+.leftcontent article{
+    margin: 0;
+    overflow: hidden;
+}
+.leftcontent article h1{
+    font-size: 1.8em;
+    margin: 0;
+    padding: 0;
+}
+.leftcontent article h2{
+    margin: 0;
+    padding: 0;
+}
+.leftcontent article hr{
+    width: 60%;
+    margin-left: 0;
+}
+.leftcontent article img{
+    max-width: 40%;
+    width: auto;
+    float: left;
+    border-radius:10px;
+    margin-right: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+.rightbar{
+    width:30%;
+    float:right;
+    padding: 5px;
+}
+.rightbar form{
+    text-align: center;
+}
+/* dropdown menu
+in sidebar
+*/
+.rightbar nav{
+    height: 160px;
+    min-width:240px;
+}
+.rightbar nav > ul{
+    list-style-type: none;
+    margin: 0;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    width: 80px;
+}
+.dmenu{
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    width:80px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px gray;
+}
+.dmenu a{
+    text-decoration: none;
+}
+.dropdown:hover{
+    background-color: gray;
+    color: white;
+}
+.dropdown:hover .dmenu{
+    display: block;
+}
+.dmenu li:hover{
+    background-color: gray;
+}
+.dmenu li:hover .ddmi{
+    color: white;
+}
+
+#commtext label, #commtext textarea, #commtext input{
+    display: block;
+    width:70%;
+}
+@media screen and (max-width: 700px){
+    .headerleft{
+        text-align: center;
+        float: none;
+    }
+    .menubar nav{
+        float: none;
+    }
+    .menubar nav > div{
+        display: block;
+        text-align: center;
+        padding-top: 0;
+    }
+    .rightbar, .leftcontent{
+        width: 80%;
+        margin: auto;
+        float: none;
+    }
+}
+footer{
+    width: 100%;
+    background-color:rgb(179, 223, 226);
+}
+footer h3{
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    border-top: red 1px solid;
+}
