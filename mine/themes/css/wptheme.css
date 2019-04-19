@@ -158,6 +158,13 @@ in sidebar
         margin: auto;
         float: none;
     }
+    .leftcontent article img{
+        float: none;
+        margin-left:auto;
+        margin-right: auto;
+        display: block;
+        max-width:90%;
+    }
 }
 footer{
     width: 100%;
