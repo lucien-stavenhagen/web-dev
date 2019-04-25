@@ -62,3 +62,13 @@ footer a:hover{
     color: #cccccc;
     text-decoration: underline;
 }
+@media screen and (max-width: 700px){
+    .commentsect{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    .commentsect{
+        width: 98%;
+    }
+}

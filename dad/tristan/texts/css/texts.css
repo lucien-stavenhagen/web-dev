@@ -86,4 +86,12 @@ the "birth" episode
         display: block;
         max-width:97%;
     }
+    section{
+        width:90%;
+    }
+}
+@media screen and (max-width: 600px){
+    section{
+        width: 98%;
+    }
 }

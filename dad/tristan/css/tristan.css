@@ -85,6 +85,9 @@ header .home{
     header h2{
         font-size: 2em;
     }
+    #herrkupke{
+        width: 70%;
+    }
 }
 #episodes > div{
     padding:5px;

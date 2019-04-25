@@ -22,7 +22,7 @@ article hr{
     display:block;
 }
 img{
-    max-width:100%;
+    max-width:97%;
     width:auto;
     box-shadow: 8px 8px 4px grey;
 }
@@ -46,4 +46,14 @@ footer a{
 footer a:hover{
     text-decoration: underline;
     color: #cccccc;
+}
+@media screen and (max-width: 700px){
+    article{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    article{
+        width: 99%;
+    }
 }

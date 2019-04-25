@@ -44,7 +44,7 @@ section img{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    max-width:100%;
+    max-width:97%;
     width: auto;
     box-shadow: var(--my-box-shadow);
 }
@@ -74,8 +74,17 @@ footer a:hover{
 @media screen and (max-width: 700px){
     .headercontainer{
         grid-template-columns: 1fr;
+        width: 90%;
     }
     .headercontainer img{
         grid-row: 1/ span 1;
     }
+    section{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    section, .headercontainer{
+        width: 98%;
+    } 
 }

@@ -69,4 +69,7 @@ section{
     .dupetitle{
         display: none;
     }
+    section{
+        width:98%;
+    }
 }
