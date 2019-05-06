@@ -496,6 +496,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom:1px;
+	text-align: center;
 }
 .site-footer{
 	border: var( --my-border);
@@ -506,16 +507,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1px;
+	text-align: center;
 }
 
-.site-title{
-	text-transform: uppercase;
-}
 .site-title a{
 	text-decoration: none;
 }
+.site-title, 
 .site-description{
-	font-style: italic;
+	font-variant: small-caps;
+	text-shadow: -1px 0 1px white, 1px 0 white, 0 1px white, 0 -1px white;
 }
 
 .content-area{
@@ -543,7 +544,7 @@ body {
 }
 /* end LS custom */
 hr {
-	background-color: #ccc;
+	background-color:gray;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
