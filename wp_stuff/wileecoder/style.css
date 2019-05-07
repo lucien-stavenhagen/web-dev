@@ -542,6 +542,17 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+#calendar_wrap.calendar_wrap{
+	border: var(--my-border);
+	border-radius: var(--my-border-radius);
+	overflow: hidden;
+}
+#wp-calendar tbody tr td{
+	text-align: center;
+}
+#wp-calendar tbody tr td:hover{
+	background-color:#cccccc;
+}
 /* end LS custom */
 hr {
 	background-color:gray;
