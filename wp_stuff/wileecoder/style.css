@@ -542,16 +542,37 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+/**
+* style widget calender 
+*/
+
 #calendar_wrap.calendar_wrap{
 	border: var(--my-border);
 	border-radius: var(--my-border-radius);
 	overflow: hidden;
 }
+/** LS custom
+* this centers the number in the td
+* and uses absolute positioning on the 
+* a element to stretch it to the inside
+* of the td cell. So when there's an a
+* tag, the whole cell's background can 
+* be set
+*/
 #wp-calendar tbody tr td{
 	text-align: center;
+	padding: 0;
+	margin: 0;
+	position: relative;
 }
-#wp-calendar tbody tr td:hover{
+#wp-calendar tbody tr td a{
 	background-color:#cccccc;
+	text-decoration: none;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
 }
 /* end LS custom */
 hr {
