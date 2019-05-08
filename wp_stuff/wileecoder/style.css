@@ -524,7 +524,7 @@ body {
 	padding: 7px;
 	background-image: var( --my-content-background);
 	border-radius: var( --my-border-radius);
-	border: 1px solid black;
+	border: var(--my-border);
 	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
@@ -537,7 +537,7 @@ body {
 	margin-top: 1px;
 	background-image: var( --my-content-background);
 	border-radius: var( --my-border-radius);
-	border: 1px solid black;
+	border: var(--my-border);
 	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
