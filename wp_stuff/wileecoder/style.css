@@ -825,36 +825,6 @@ a:hover, a:active {
 	background-color: #0e1e27;
 }
 
-@media screen and (min-width: 37.5em) {
-	.main-navigation{
-		width: var(--my-main-width);
-		margin: auto;
-		float: none;
-	}
-	.content-area{
-		width: 69.9%;
-		float: left;
-	}
-	
-	.widget-area{
-		width: 29.9%;
-		float: right;
-	}
-	.site-content,
-	.site-branding,
-	.site-footer{
-		width: var(--my-main-width);
-		margin-left: auto;
-		margin-right: auto;		
-	}
-
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -981,7 +951,11 @@ a:hover, a:active {
 	margin: 0 0 1.2em;
 	/* Make sure select elements fit in widgets. */
 }
-/* LS custom */
+
+/* LS custom
+* https://codex.wordpress.org/Function_Reference/wp_tag_cloud
+* also see custom filter at bottom of functions.php
+*/
 .widget h2{
 	font-size: 1.1em;
 	margin: 0;
@@ -994,7 +968,6 @@ a:hover, a:active {
 .widget select {
 	max-width: 100%;
 }
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1010,6 +983,18 @@ a:hover, a:active {
 .post,
 .page {
 	margin: 0 0 1.5em;
+}
+/* LS custom */
+
+.two-columns{
+	width: 100%;
+	display: block;
+	margin-bottom: 2px;
+	padding: 4px;
+	background-image: var( --my-content-background);
+	border-radius: var( --my-border-radius);
+	border: var(--my-border);
+
 }
 
 .updated:not(.published) {
@@ -1148,4 +1133,45 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/* LS custom
+* move media queries to bottom
+* so anything that could go in it
+* is already defined above it
+*/
+
+@media screen and (min-width: 37.5em) {
+	.main-navigation{
+		width: var(--my-main-width);
+		margin: auto;
+		float: none;
+	}
+	.content-area{
+		width: 69.9%;
+		float: left;
+	}
+	
+	.widget-area{
+		width: 29.9%;
+		float: right;
+	}
+	.site-content,
+	.site-branding,
+	.site-footer{
+		width: var(--my-main-width);
+		margin-left: auto;
+		margin-right: auto;		
+	}
+	.two-columns{
+		width: 49.3%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
 }

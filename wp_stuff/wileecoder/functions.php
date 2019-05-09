@@ -159,3 +159,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * LS custom this is taken from the twentysixteen 
+ * Modifies tag cloud widget arguments to display all tags in the same font size
+ * and use list format for better accessibility.
+ *
+ * @since Twenty Sixteen 1.1
+ *
+ * @param array $args Arguments for tag cloud widget.
+ * @return array The filtered arguments for tag cloud widget.
+ */
+function twentysixteen_widget_tag_cloud_args( $args ) {
+	$args['largest']  = 1;
+	$args['smallest'] = 1;
+	$args['unit']     = 'em';
+	$args['format']   = 'list';
+
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+?>
