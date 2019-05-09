@@ -48,7 +48,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--my-header-gradient: linear-gradient(to right, rgb(101, 157, 221), rgb(152, 214, 255));
 	--my-menu-gradient: linear-gradient(to right, rgb(83, 41, 41), rgb(153, 90, 90));
 	--my-body-background: rgb(196, 240, 255);
-	--my-content-background: linear-gradient(to right, rgb(104, 203, 235), rgb(162, 244, 255));
+	--my-content-gradient: linear-gradient(to right, rgb(104, 203, 235), rgb(162, 244, 255));
+	--my-redblue-gradient:linear-gradient(to right, rgb(247, 191, 191), rgb(190, 234, 255));
 	--my-border-radius: 5px;
 	--my-border: 1px solid black;
 	--my-button-hover:rgb(252, 178, 144);
@@ -522,7 +523,7 @@ body {
 .content-area{
 	width: var( --my-max-width);
 	padding: 7px;
-	background-image: var( --my-content-background);
+	background-image: var( --my-content-gradient);
 	border-radius: var( --my-border-radius);
 	border: var(--my-border);
 	overflow: auto;
@@ -535,7 +536,7 @@ body {
 	width: var( --my-max-width );
 	padding: 6px;
 	margin-top: 1px;
-	background-image: var( --my-content-background);
+	background-image: var( --my-content-gradient);
 	border-radius: var( --my-border-radius);
 	border: var(--my-border);
 	overflow: auto;
@@ -968,6 +969,24 @@ a:hover, a:active {
 .widget select {
 	max-width: 100%;
 }
+
+/*--------------------------------------------------------------
+* LS custom
+* styling for 404.php modifications
+--------------------------------------------------------------*/
+
+.not-found-info{
+	width: var( --my-main-width );
+	border: var( --my-border);
+	border-radius: var(--my-border-radius);
+	background-image: var(--my-redblue-gradient);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:1px;
+	margin-bottom: 1px;
+	padding: 8px;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -986,12 +1005,12 @@ a:hover, a:active {
 }
 /* LS custom */
 
-.two-columns{
+.one-column, .two-columns{
 	width: 100%;
 	display: block;
 	margin-bottom: 2px;
 	padding: 4px;
-	background-image: var( --my-content-background);
+	background-image: var( --my-redblue-gradient);
 	border-radius: var( --my-border-radius);
 	border: var(--my-border);
 

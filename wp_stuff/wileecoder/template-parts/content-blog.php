@@ -16,7 +16,7 @@
 <?php
 global $wp_query;
 if ($wp_query->post_count === 1) {
-	$columns = '';
+	$columns = 'one-column';
 } else {
 	$columns = 'two-columns';
 }
