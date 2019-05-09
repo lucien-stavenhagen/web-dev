@@ -45,10 +45,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* LS custom variables*/
 :root{
 	--my-button-background: rgb(156, 219, 238);
-	--my-header-gradient: linear-gradient(to right, rgb(101, 173, 201), rgb(152, 255, 241));
+	--my-header-gradient: linear-gradient(to right, rgb(101, 157, 221), rgb(152, 214, 255));
 	--my-menu-gradient: linear-gradient(to right, rgb(83, 41, 41), rgb(153, 90, 90));
-	--my-body-background: rgb(199, 222, 230);
-	--my-content-background: linear-gradient(to right, rgb(236, 205, 200), rgb(243, 231, 231));
+	--my-body-background: rgb(196, 240, 255);
+	--my-content-background: linear-gradient(to right, rgb(104, 203, 235), rgb(162, 244, 255));
 	--my-border-radius: 5px;
 	--my-border: 1px solid black;
 	--my-button-hover:rgb(252, 178, 144);
@@ -502,7 +502,7 @@ body {
 	border: var( --my-border);
 	border-radius: var( --my-border-radius);
 	padding: 14px;
-	background-image: var( --my-content-background );
+	background-image: var( --my-header-gradient );
 	width: var( --my-max-width );
 	margin-left: auto;
 	margin-right: auto;
