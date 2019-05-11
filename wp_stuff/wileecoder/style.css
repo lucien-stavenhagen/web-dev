@@ -762,17 +762,18 @@ a:hover, a:active {
 
 .main-navigation ul {
 	display: none;
+	vertical-align: middle;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	overflow: hidden;
+	overflow: visible;
 	border-radius: var( --my-border-radius );
 	border: var(--my-border);
 	background-image: var( --my-menu-gradient );
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
 	top: 100%;
@@ -812,8 +813,9 @@ a:hover, a:active {
 /* Small menu. */
 .menu-toggle, 
 .main-navigation.toggled ul {
-	display: block;
+	display: inline-block;
 }
+
 /* LS custom */
 
 .menu-item{
@@ -1164,7 +1166,9 @@ object {
 	.main-navigation{
 		width: var(--my-main-width);
 		margin: auto;
-		float: none;
+	}
+	.main-navigation ul {
+		display: inline-block;
 	}
 	.content-area{
 		width: 69.9%;
@@ -1189,8 +1193,5 @@ object {
 	}
 	.menu-toggle {
 		display: none;
-	}
-	.main-navigation ul {
-		display: block;
 	}
 }
