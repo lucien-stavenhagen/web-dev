@@ -46,12 +46,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 :root{
 	--my-button-background: rgb(156, 219, 238);
 	--my-header-gradient: linear-gradient(to right, rgb(101, 157, 221), rgb(152, 214, 255));
-	--my-menu-gradient: linear-gradient(to right, rgb(83, 41, 41), rgb(153, 90, 90));
+	--my-menu-gradient: linear-gradient(to right, rgb(117, 61, 61), rgb(153, 90, 90));
+	--my-menu-highlight-gradient: linear-gradient(to right, rgb(33, 30, 58), rgb(49, 101, 170));
 	--my-body-background: rgb(196, 240, 255);
 	--my-content-gradient: linear-gradient(to right, rgb(104, 203, 235), rgb(162, 244, 255));
 	--my-redblue-gradient:linear-gradient(to right, rgb(247, 191, 191), rgb(190, 234, 255));
-	--my-border-radius: 5px;
+	--my-border-radius: 3px;
 	--my-border: 1px solid black;
+	--my-menu-absolute-top: -1px; /* set this to - whatever border is for embedded menu alignment */
 	--my-button-hover:rgb(252, 178, 144);
 	--my-main-width: 92%;
 	--my-max-width: 99%;
@@ -768,8 +770,6 @@ a:hover, a:active {
 	padding-left: 0;
 	overflow: visible;
 	border-radius: var( --my-border-radius );
-	border: var(--my-border);
-	background-image: var( --my-menu-gradient );
 }
 
 .main-navigation ul ul {
@@ -777,13 +777,13 @@ a:hover, a:active {
 	float: left;
 	position: absolute;
 	top: 100%;
-	left: -999em;
+    left: -999em;
 	z-index: 99999;
 }
 
 .main-navigation ul ul ul {
 	left: -999em;
-	top: 0;
+	top: var(--my-menu-absolute-top);
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -792,17 +792,21 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 150px;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+	left: 0;
+/*	left: auto; */
 }
 
 .main-navigation li {
 	float: left;
 	position: relative;
+	background-image: var( --my-menu-gradient );
+	border-radius:var(--my-border-radius);
+	border: var(--my-border);
 }
 
 .main-navigation a {
@@ -825,9 +829,8 @@ a:hover, a:active {
 	color: white;
 }
 .menu-item:hover{
-	background-color: #0e1e27;
+	background-image: var(--my-menu-highlight-gradient);
 }
-
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
