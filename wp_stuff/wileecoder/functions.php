@@ -45,7 +45,7 @@ if ( ! function_exists( 'wileecoder_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'mainmenu' => esc_html__( 'Primary Menu', 'wileecoder' ),
-			'socialmenu' => esc_html__('Social Links Menu','wileecoder')
+			'footermenu' => esc_html__('Footer Menu','wileecoder')
 		) );
 
 		/*

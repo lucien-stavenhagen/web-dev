@@ -501,6 +501,7 @@ body {
 	margin-bottom:1px;
 	text-align: center;
 }
+
 .site-footer{
 	border: var( --my-border);
 	border-radius: var( --my-border-radius);
@@ -510,9 +511,28 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1px;
-	text-align: center;
+	overflow: auto;
 }
 
+.site-info{
+	width: var(--my-max-width);
+}
+/* LS custom
+* when no footer menu is present
+* use this styling for the footer
+*/
+.site-info-nonav{
+	width: var(--my-max-width);
+	text-align: center;
+}
+.footer-navigation{
+	width: 60%;
+	margin: auto;
+}
+.footer-navigation li{
+	min-width: 100px;
+	overflow: hidden;
+}
 .site-title a{
 	text-decoration: none;
 }
@@ -817,9 +837,8 @@ a:hover, a:active {
 /* Small menu. */
 .menu-toggle, 
 .main-navigation.toggled ul {
-	display: inline-block;
+	display: block;
 }
-
 /* LS custom */
 
 .menu-item{
@@ -832,6 +851,24 @@ a:hover, a:active {
 	background-image: var(--my-menu-highlight-gradient);
 }
 
+/* LS custom footer menu styling*/
+.footer-menu{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+.footer-menu li{
+	float: left;
+	margin: 0;
+	background-image: var( --my-menu-gradient );
+	border-radius:var(--my-border-radius);
+	border: var(--my-border);
+
+}
+.footer-menu li a{
+	text-decoration: none;
+}
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -1196,5 +1233,19 @@ object {
 	}
 	.menu-toggle {
 		display: none;
+	}
+	.site-info{
+		width: 48%;
+		float: left;
+	}
+	
+	.footer-navigation{
+		width: 48%;
+		float: right;
+		margin: 0;
+	}
+	
+	.footer-navigation li{
+		min-width: 0;
 	}
 }
