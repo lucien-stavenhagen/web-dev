@@ -20,8 +20,8 @@ get_header();
 			/* LS custom */
 			the_post_navigation(
 				array(
-					'prev_text' => '<h4><<-- <q>%title</q></h4>',
-					'next_text' => '<h4><q>%title</q> -->></h4>',
+					'prev_text' => '<p><<-- <q>%title</q></p>',
+					'next_text' => '<p><q>%title</q> -->></p>',
 				)
 			);
 

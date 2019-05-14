@@ -740,7 +740,8 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: darkblue;
+	text-decoration: none;
 }
 
 a:visited {
@@ -766,7 +767,6 @@ a:hover, a:active {
 .byline,
 .cat-links,
 .tags-links{
-	font-style: italic;
 	padding: 0;
 	margin: 0;
 }
