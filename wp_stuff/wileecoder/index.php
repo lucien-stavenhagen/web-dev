@@ -48,7 +48,14 @@ get_header();
 				get_template_part( 'template-parts/content', 'blog' );
 				
 			endwhile;
-			the_posts_navigation();
+			/*the_posts_navigation();*/
+			the_posts_pagination(
+				array(
+					'prev_text'          => __('<< Previous') . '<span class="screen-reader-text">' . __("Previous page", "wileecoder") . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __("Next page", "wileecoder") . '</span>' . __( 'Next >>'),
+					'mid_size'			 => 1,
+				)
+			);
 
 		else :
 

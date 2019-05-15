@@ -541,7 +541,14 @@ body {
 	font-variant: small-caps;
 	text-shadow: -1px 0 1px white, 1px 0 white, 0 1px white, 0 -1px white;
 }
-
+/* LS custom
+* styling for pagination link at bottom of blog
+* to support the_posts_pagination() in
+* index.php
+*/
+.navigation.pagination{
+	text-align: center;
+}
 .content-area{
 	width: var( --my-max-width);
 	padding: 7px;
