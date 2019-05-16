@@ -38,7 +38,15 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			/*the_posts_navigation();*/
+			the_posts_pagination(
+				array(
+					'prev_text'          => __('<small><< Previous</small>') . '<span class="screen-reader-text">' . __("Previous page", "wileecoder") . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __("Next page", "wileecoder") . '</span>' . __( '<small>Next >></small>'),
+					'mid_size'			 => 1,
+				)
+			);
+
 
 		else :
 

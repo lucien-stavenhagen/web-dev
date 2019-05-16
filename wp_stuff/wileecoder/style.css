@@ -547,8 +547,32 @@ body {
 * index.php
 */
 .navigation.pagination{
+	margin-top:2px;
 	text-align: center;
 }
+
+.navigation.pagination a{
+	display: inline-block;
+	padding: 1px 3px;
+	color: white;
+	background-image: var(--my-menu-gradient);
+	border-radius: var(--my-border-radius);
+	border: var(--my-border);
+}
+.page-numbers.dots{
+	display: none;
+	padding: 1px 3px;
+	color: white;
+	background-image: var(--my-menu-gradient);
+	border-radius: var(--my-border-radius);
+	border: var(--my-border);
+}
+.navigation.pagination .page-numbers.current{
+	background-image: var(--my-content-gradient);
+	color: black;
+}
+
+
 .content-area{
 	width: var( --my-max-width);
 	padding: 7px;
@@ -1254,5 +1278,8 @@ object {
 	
 	.footer-navigation li{
 		min-width: 0;
+	}
+	.page-numbers.dots{
+		display: inline-block;
 	}
 }
