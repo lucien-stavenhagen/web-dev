@@ -46,12 +46,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 :root{
 	--my-button-background: rgb(156, 219, 238);
 	--my-header-gradient: linear-gradient(to right, rgb(101, 157, 221), rgb(152, 214, 255));
-	--my-menu-gradient: linear-gradient(to right, rgb(117, 61, 61), rgb(153, 90, 90));
-	--my-menu-highlight-gradient: linear-gradient(to right, rgb(33, 30, 58), rgb(49, 101, 170));
+	--my-menu-gradient: linear-gradient(to right, rgb(104, 54, 54), rgb(136, 79, 79));
+	--my-menu-highlight-gradient: linear-gradient(to right, rgb(33, 30, 58), rgb(37, 79, 134));
 	--my-body-background: rgb(196, 240, 255);
 	--my-content-gradient: linear-gradient(to right, rgb(104, 203, 235), rgb(162, 244, 255));
 	--my-redblue-gradient:linear-gradient(to right, rgb(247, 191, 191), rgb(190, 234, 255));
-	--my-border-radius: 3px;
+	--my-border-radius: 2px;
 	--my-border: 1px solid black;
 	--my-menu-absolute-top: -1px; /* set this to - whatever border is for embedded menu alignment */
 	--my-button-hover:rgb(252, 178, 144);
@@ -567,9 +567,15 @@ body {
 	border-radius: var(--my-border-radius);
 	border: var(--my-border);
 }
+.navigation.pagination a:hover{
+	background-image:var(--my-menu-highlight-gradient);
+}
 .navigation.pagination .page-numbers.current{
 	background-image: var(--my-content-gradient);
+	padding: 5px 3px;
 	color: black;
+	border-radius: var(--my-border-radius);
+	border: var(--my-border);
 }
 
 
