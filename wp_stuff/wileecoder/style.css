@@ -1141,7 +1141,7 @@ a:hover, a:active {
 .wp-block-pullquote cite{
 	font-size: .8em;
 }
-.wp-block-quote cite:before,
+.wp-block-quote:not(.is-style-large) cite:before,
 .wp-block-pullquote cite:before {
 	content: "\2014\00a0";
 }
@@ -1161,10 +1161,12 @@ a:hover, a:active {
 	border-bottom: 2px solid grey;
 }
 
-/* block separator */
-hr.wp-block-separator{
-	width: 60%;
-	height: 2px;
+/* block separator 
+* width set only if it's
+* not is-style-wide
+*/
+hr.wp-block-separator:not(.is-style-wide){
+	width: 65%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
