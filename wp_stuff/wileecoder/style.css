@@ -546,6 +546,39 @@ body {
 * to support the_posts_pagination() in
 * index.php
 */
+
+/* this is for pagination
+* within a block done manually
+* with
+* <p><!--nextpage--></p>
+*/
+.page-links{
+	clear: both;
+	margin: 0 0 1.4em;
+	margin-top: 1px;
+	color: black;
+	font-variant: small-caps;
+}
+.page-links .post-page-numbers{
+	display: inline-block;
+	padding: 0 3px;
+	color: white;
+	background-image: var(--my-menu-gradient);
+	border-radius: var(--my-border-radius);
+	border: var(--my-border);
+}
+.page-links .post-page-numbers.current{
+	padding: 0 3px;
+	color: black;
+	background-image: var(--my-content-gradient);
+	border-radius: var(--my-border-radius);
+	border: var(--my-border);
+}
+.page-links a:hover{
+	background-image:var(--my-menu-highlight-gradient);
+}
+
+/* now for blog pages navigation */
 .navigation.pagination{
 	margin-top:2px;
 	text-align: center;
@@ -559,6 +592,7 @@ body {
 	border-radius: var(--my-border-radius);
 	border: var(--my-border);
 }
+
 .page-numbers.dots{
 	display: none;
 	padding: 1px 3px;
@@ -570,6 +604,7 @@ body {
 .navigation.pagination a:hover{
 	background-image:var(--my-menu-highlight-gradient);
 }
+
 .navigation.pagination .page-numbers.current{
 	background-image: var(--my-content-gradient);
 	padding: 5px 3px;
@@ -1105,10 +1140,6 @@ a:hover, a:active {
 	margin: 1.5em 0 0;
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
 /*--------------------------------------------------------------
 * LS custom
 * Content - block styling
