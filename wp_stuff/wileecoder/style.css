@@ -1109,7 +1109,66 @@ a:hover, a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+/*--------------------------------------------------------------
+* LS custom
+* Content - block styling
+--------------------------------------------------------------*/
+/* captions */
 
+[class^="wp-block-"] figcaption {
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
+	text-align: left;
+}
+/* tables */
+.wp-block-table{
+	border-collapse: collapse;
+}
+
+.wp-block-table,
+.wp-block-table td,
+.wp-block-table th{
+	border: var(--my-border);
+	padding: 5px;
+}
+/* quotes and their citations */
+.wp-block-quote{
+	border-left: 2px gray solid;
+	padding-left: 5px;
+}
+.wp-block-quote cite,
+.wp-block-pullquote cite{
+	font-size: .8em;
+}
+.wp-block-quote cite:before,
+.wp-block-pullquote cite:before {
+	content: "\2014\00a0";
+}
+/* file blocks */
+.wp-block-file .wp-block-file__button{
+	border-radius: var(--my-border-radius);
+	border: var(--my-border);
+	background-image: var(--my-menu-gradient);
+}
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-file .wp-block-file__button:focus{
+	background-image:var(--my-menu-highlight-gradient);
+}
+/* pull quotes */
+.wp-block-pullquote{
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+}
+
+/* block separator */
+hr.wp-block-separator{
+	width: 60%;
+	height: 2px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
