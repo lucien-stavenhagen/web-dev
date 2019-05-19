@@ -48,20 +48,42 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 /* LS custom variables*/
 
-$my-button-background: rgb(156, 219, 238);
-$my-header-gradient: linear-gradient(to right, rgb(101, 157, 221), rgb(152, 214, 255));
-$my-menu-gradient: linear-gradient(to right, rgb(104, 54, 54), rgb(136, 79, 79));
-$my-menu-highlight-gradient: linear-gradient(to right, rgb(33, 30, 58), rgb(37, 79, 134));
-$my-body-background: rgb(196, 240, 255);
-$my-content-gradient: linear-gradient(to right, rgb(104, 203, 235), rgb(162, 244, 255));
-$my-redblue-gradient:linear-gradient(to right, rgb(247, 191, 191), rgb(190, 234, 255));
-$my-border-radius: 2px;
-$my-border: 1px solid black;
-$my-menu-absolute-top: -1px; /* set this to - whatever border is for embedded menu alignment */
-$my-button-hover:rgb(252, 178, 144);
 $my-main-width: 92%;
 $my-max-width: 99%;
 
+$gradient:(
+	header: linear-gradient(to right, rgb(101, 157, 221), rgb(152, 214, 255)),
+	menu: linear-gradient(to right, rgb(104, 54, 54), rgb(136, 79, 79)),
+	highlight: linear-gradient(to right, rgb(33, 30, 58), rgb(37, 79, 134)),
+	content: linear-gradient(to right, rgb(104, 203, 235), rgb(162, 244, 255)),
+	redblue: linear-gradient(to right, rgb(247, 191, 191), rgb(190, 234, 255)),
+	none: none
+);
+
+$bg:(
+	button: rgb(156, 219, 238),
+	body: rgb(196, 240, 255),
+	hover: rgb(252, 178, 144),
+	none: none
+);
+
+$borderstyle:(
+	border: 1px solid black,
+	menutop: -1px, /* set this to - whatever border is for embedded menu alignment */
+	radius: 2px,
+	none: none
+);
+
+@mixin borders($grad){
+	border: map-get($borderstyle, border);
+	border-radius: map-get($borderstyle, radius);
+	background-image: map-get($gradient, $grad);
+}
+@mixin plain_borders($bgtype){
+	border: map-get($borderstyle, border);
+	border-radius: map-get($borderstyle, radius);
+	background-color: map-get($bg, $bgtype);
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -490,14 +512,12 @@ html {
 }
 /* LS custom */
 body {
-    background: $my-body-background;
+    background: map-get($bg, body);
     word-wrap: break-word;
 	/* Fallback for when there is no custom background color defined. */
 }
 .site-branding{
-	background-image: $my-header-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(header);
 	width: $my-max-width;
 	padding: 5px;
 	margin-left: auto;
@@ -507,10 +527,8 @@ body {
 }
 
 .site-footer{
-	border: $my-border;
-	border-radius: $my-border-radius;
+	@include borders(header);
 	padding: 14px;
-	background-image: $my-header-gradient;
 	width: $my-max-width;
 	margin-left: auto;
 	margin-right: auto;
@@ -567,19 +585,15 @@ body {
 	display: inline-block;
 	padding: 0 3px;
 	color: white;
-	background-image: $my-menu-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(menu);
 }
 .page-links .post-page-numbers.current{
 	padding: 0 3px;
 	color: black;
-	background-image: $my-content-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(content);
 }
 .page-links a:hover{
-	background-image: $my-menu-highlight-gradient;
+	background-image: map-get($gradient, highlight);
 }
 
 /* now for blog pages navigation */
@@ -592,38 +606,30 @@ body {
 	display: inline-block;
 	padding: 1px 3px;
 	color: white;
-	background-image: $my-menu-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(menu);
 }
 
 .page-numbers.dots{
 	display: none;
 	padding: 1px 3px;
 	color: white;
-	background-image: $my-menu-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(menu);
 }
 .navigation.pagination a:hover{
-	background-image: $my-menu-highlight-gradient;
+	background-image: map-get($gradient, highlight);
 }
 
 .navigation.pagination .page-numbers.current{
-	background-image: $my-content-gradient;
 	padding: 5px 3px;
 	color: black;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(content);
 }
 
 
 .content-area{
 	width: $my-max-width;
 	padding: 7px;
-	background-image: $my-content-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(content);
 	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
@@ -634,9 +640,7 @@ body {
 	width: $my-max-width;
 	padding: 6px;
 	margin-top: 1px;
-	background-image: $my-content-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(content);
 	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
@@ -646,8 +650,7 @@ body {
 */
 
 #calendar_wrap.calendar_wrap{
-	border: $my-border;
-	border-radius: $my-border-radius;
+	@include borders(none);
 	overflow: hidden;
 }
 /** LS custom
@@ -732,9 +735,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: $my-border;
-	border-radius: $my-border-radius;
-	background:$my-button-background;
+	@include plain_borders(button);
 	color: rgba(0, 0, 0, 0.8);
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -747,7 +748,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: $my-button-hover;
+	background: map-get($bg, hover);
 }
 
 button:active, button:focus,
@@ -757,7 +758,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	background: $my-button-hover;
+	background: map-get($bg, hover);
 }
 
 input[type="text"],
@@ -865,7 +866,7 @@ a:hover, a:active {
 	margin: 0;
 	padding-left: 0;
 	overflow: visible;
-	border-radius: $my-border-radius;
+	border-radius: map-get($borderstyle, radius);
 }
 
 .main-navigation ul ul {
@@ -879,7 +880,7 @@ a:hover, a:active {
 
 .main-navigation ul ul ul {
 	left: -999em;
-	top: $my-menu-absolute-top;
+	top: map-get($borderstyle, menutop);
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -900,9 +901,7 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
-	background-image: $my-menu-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
+	@include borders(menu);
 }
 
 .main-navigation a {
@@ -924,7 +923,7 @@ a:hover, a:active {
 	color: white;
 }
 .menu-item:hover{
-	background-image: $my-menu-highlight-gradient;
+	background-image: map-get($gradient, highlight);;
 }
 
 /* LS custom footer menu styling*/
@@ -937,10 +936,7 @@ a:hover, a:active {
 .footer-menu li{
 	float: left;
 	margin: 0;
-	background-image: $my-menu-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
-
+	@include borders(menu);
 }
 .footer-menu li a{
 	text-decoration: none;
@@ -1095,9 +1091,7 @@ a:hover, a:active {
 
 .not-found-info{
 	width: $my-main-width;
-	border: $my-border;
-	border-radius: $my-border-radius;
-	background-image: $my-redblue-gradient;
+	@include borders(redblue);
 	margin-left: auto;
 	margin-right: auto;
 	margin-top:1px;
@@ -1128,10 +1122,7 @@ a:hover, a:active {
 	display: block;
 	margin-bottom: 2px;
 	padding: 4px;
-	background-image: $my-redblue-gradient;
-	border-radius: $my-border-radius;
-	border: $my-border;
-
+	@include borders(redblue);
 }
 
 .updated:not(.published) {
@@ -1164,7 +1155,7 @@ a:hover, a:active {
 .wp-block-table,
 .wp-block-table td,
 .wp-block-table th{
-	border: $my-border;
+	border: map-get($borderstyle, border);
 	padding: 5px;
 }
 /* quotes and their citations */
@@ -1182,13 +1173,11 @@ a:hover, a:active {
 }
 /* file blocks */
 .wp-block-file .wp-block-file__button{
-	border-radius: $my-border-radius;
-	border: $my-border;
-	background-image: $my-menu-gradient;
+	@include borders(menu);
 }
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-file .wp-block-file__button:focus{
-	background-image: $my-menu-highlight-gradient;
+	background-image: map-get($gradient, highlight);
 }
 /* pull quotes */
 .wp-block-pullquote{
